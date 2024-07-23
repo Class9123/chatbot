@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <style>
+    * {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #007FEF;
+  font-family: "Roboto", sans-serif;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.ChatWindow {
+  width: 48rem;
+  height: 75vh;
+  padding: 2.5rem;
+  padding-bottom: 6.5rem;
+  overflow: hidden;
+  overflow-y: auto;
+  align-self: flex-end;
+  background: #eee;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  border-radius: 3px 3px 0 0;
+}
+
+.ChatItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.ChatItem--expert {
+  flex-direction: row-reverse;
+}
+
+.ChatItem-meta {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  width: 2.5rem;
+}
+.ChatItem--expert .ChatItem-meta {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+.ChatItem-chatContent {
+  position: relative;
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.ChatItem-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.ChatItem--expert .ChatItem-avatar {
+  margin-right: 0;
+}
+
+.ChatItem-avatarImage {
+  max-width: 100%;
+  border-radius: 100em;
+}
+
+.ChatItem-avatarInitials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #ccc;
+  color: #444;
+  border-radius: 100em;
+}
+    </style>
+  </head>
+  <body>
+<div class="ChatWindow">
+  
+  <div class="ChatItem ChatItem--customer">
+    <div class="ChatItem-meta">
+      <div class="ChatItem-avatar">
+        <img class="ChatItem-avatarImage" src="https://image.ibb.co/eTiXWa/avatarrobot.png">
+      </div>
+    </div>
+    <div class="ChatItem-chatContent">
+      <div class="ChatItem-chatText">sound isnt working on my phone anymore</div>
+      <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:49</div>
+    </div>
+  </div>
+  
+  <div class="ChatItem ChatItem--expert">
+    <div class="ChatItem-meta">
+      <div class="ChatItem-avatar">
+        <img class="ChatItem-avatarImage" src="https://randomuser.me/api/portraits/women/0.jpg">
+      </div>
+    </div>
+    <div class="ChatItem-chatContent">
+      <div class="ChatItem-chatText">hi there!</div>
+      <div class="ChatItem-chatText">i'd be happy to help you!</div>
+      <div class="ChatItem-chatText">just to make sure, have you tried pressing the physical volume button on the side to make sure the volume is all the way up?</div>
+      <div class="ChatItem-timeStamp"><strong>Me</strong> • Today 05:49</div>
+    </div>
+  </div>
+  
+  <div class="ChatItem ChatItem--customer">
+    <div class="ChatItem-meta">
+      <div class="ChatItem-avatar">
+        <img class="ChatItem-avatarImage" src="https://image.ibb.co/eTiXWa/avatarrobot.png">
+      </div>
+    </div>
+    <div class="ChatItem-chatContent">
+      <div class="ChatItem-chatText">k let metry</div>
+      <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:51</div>
+    </div>
+  </div>
+  
+  <div class="ChatItem ChatItem--customer">
+    <div class="ChatItem-meta">
+      <div class="ChatItem-avatar">
+        <img class="ChatItem-avatarImage" src="https://image.ibb.co/eTiXWa/avatarrobot.png">
+      </div>
+    </div>
+    <div class="ChatItem-chatContent">
+      <div class="ChatItem-chatText">i think the volume is all the way up</div>
+      <div class="ChatItem-timeStamp"><strong>Chat Bot</strong> • Today 05:53</div>
+    </div>
+  </div>
+  
+  <div class="ChatItem ChatItem--expert">
+    <div class="ChatItem-meta">
+      <div class="ChatItem-avatar">
+        <img class="ChatItem-avatarImage" src="https://randomuser.me/api/portraits/women/0.jpg">
+      </div>
+    </div>
+    <div class="ChatItem-chatContent">
+      <div class="ChatItem-chatText">no worries!</div>
+      <div class="ChatItem-chatText">try this for me: <br><br>- Go to Settings<br><br>- Go to Sound <br><br>- Make sure mute is off</div>
+      <div class="ChatItem-timeStamp"><strong>Me</strong> • Today 05:54</div>
+    </div>
+  </div>
+  
+ 
+<div class="ChatInput is-hidey">
+    <div class="ChatInput-input" contenteditable="true" placeholder="Type your message here..."></div>
+</div>
+
+	<script src="index.js"></script>
+  </body>
+</html>
