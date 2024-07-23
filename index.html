@@ -269,6 +269,32 @@ strong {
     <div class="ChatInput-input" contenteditable="true" placeholder="Type your message here..."></div>
 </div>
 
-	<script src="index.js"></script>
+	<script>
+		$ChatInput = $('.ChatInput-input')
+
+$ChatInput.keyup (e) ->
+  if e.shiftKey && e.which == 13
+    e.preventDefault()
+    return false
+  $this = $(this)
+  if e.which == 13
+    newText = $this.html()
+    $this.html('')
+    $('.ChatWindow').append('
+      <div class="ChatItem ChatItem--expert">
+        <div class="ChatItem-meta">
+          <div class="ChatItem-avatar">
+            <img class="ChatItem-avatarImage" src="https://randomuser.me/api/portraits/women/0.jpg">
+          </div>
+        </div>
+        <div class="ChatItem-chatContent">
+          <div class="ChatItem-chatText">' + newText + '</div>
+          <div class="ChatItem-timeStamp"><strong>Me</strong> · Today 05:49</div>
+        </div>
+      </div>
+    ')
+    $('.ChatWindow').animate({scrollTop: $('.ChatWindow').prop("scrollHeight")}, 500)
+  
+	</script>
   </body>
 </html>
